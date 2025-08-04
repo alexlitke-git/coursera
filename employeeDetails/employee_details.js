@@ -26,7 +26,14 @@ function displayHREmployees() {
 }
 
 //Function to find Employee with ID #2
-function findEmployeeById() {
+/* function findEmployeeById() {
     const findedEmployee = employees.find(employee => employee.id === 2);
     document.getElementById('employeesDetails').innerHTML = `<p>Employee with ID #2: ${findedEmployee.name}.</p>`;
+} */
+
+// Function to find Employee by ID provided by user
+function handleClick() {
+    const employeeId = parseInt(document.getElementById('userInput').value);
+    const findedEmployee = employees.find(employee => employee.id === employeeId);
+    document.getElementById('employeesDetails').innerHTML += `<p>Finded employee: ${findedEmployee.name} (ID: ${findedEmployee.id}).</p>`;
 }
